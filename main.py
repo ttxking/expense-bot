@@ -91,7 +91,7 @@ def append_to_sheet(item, paid_by, currency, amount):
 
     sheet.values().append(
         spreadsheetId=SPREADSHEET_ID,
-        range=f"{SHEET_NAME}!A:F",
+        range=f"{SHEET_NAME}!A1",
         valueInputOption="RAW",
         body=body
     ).execute()
