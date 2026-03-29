@@ -76,16 +76,15 @@ def parse_message(text):
 # ========= WRITE TO GOOGLE SHEET =========
 def append_to_sheet(item, paid_by, currency, amount):
     # Columns: A B C D E F
-    row = ["", "", "", "", "", ""]
+    row = ["", "", "", "", "", ""]  # A B C D E F
 
-    row[0] = item      # A
-    row[1] = paid_by   # B
+    row[0] = item        # A
+    row[2] = paid_by     # C
 
     if currency == "KRW":
-        row[3] = amount   # D
+        row[3] = amount  # D
     elif currency == "THB":
-        row[5] = amount   # F
-
+        row[5] = amount  # F
     body = {
         "values": [row]
     }
